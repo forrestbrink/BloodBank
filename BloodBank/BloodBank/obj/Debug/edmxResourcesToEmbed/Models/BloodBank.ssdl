@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BloodBankModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BloodBankModelStoreContainer">
+    <EntitySet Name="BloodBank" EntityType="BloodBankModel.Store.BloodBank" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Donors" EntityType="BloodBankModel.Store.Donors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Patients" EntityType="BloodBankModel.Store.Patients" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="BloodBank">
+    <Key>
+      <PropertyRef Name="BloodBankID" />
+    </Key>
+    <Property Name="BloodBankID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BloodBankName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BloodBankAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="BloodBankContactNumber" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Donors">
+    <Key>
+      <PropertyRef Name="DonorID" />
+    </Key>
+    <Property Name="DonorID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DonorName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DonorBloodGroup" Type="nvarchar" MaxLength="10" />
+    <Property Name="DonorMedicalReport" Type="nvarchar" MaxLength="100" />
+    <Property Name="DonorAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="DonorContactNumber" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PatientName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PatientBloodGroup" Type="nvarchar" MaxLength="10" />
+    <Property Name="PatientDisease" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+</Schema>

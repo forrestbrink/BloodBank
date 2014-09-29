@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BloodBankModelStoreContainer" CdmEntityContainer="BloodBankEntities">
+    <EntitySetMapping Name="BloodBanks">
+      <EntityTypeMapping TypeName="BloodBankModel.BloodBank">
+        <MappingFragment StoreEntitySet="BloodBank">
+          <ScalarProperty Name="BloodBankID" ColumnName="BloodBankID" />
+          <ScalarProperty Name="BloodBankName" ColumnName="BloodBankName" />
+          <ScalarProperty Name="BloodBankAddress" ColumnName="BloodBankAddress" />
+          <ScalarProperty Name="BloodBankContactNumber" ColumnName="BloodBankContactNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Donors">
+      <EntityTypeMapping TypeName="BloodBankModel.Donor">
+        <MappingFragment StoreEntitySet="Donors">
+          <ScalarProperty Name="DonorID" ColumnName="DonorID" />
+          <ScalarProperty Name="DonorName" ColumnName="DonorName" />
+          <ScalarProperty Name="DonorBloodGroup" ColumnName="DonorBloodGroup" />
+          <ScalarProperty Name="DonorMedicalReport" ColumnName="DonorMedicalReport" />
+          <ScalarProperty Name="DonorAddress" ColumnName="DonorAddress" />
+          <ScalarProperty Name="DonorContactNumber" ColumnName="DonorContactNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="BloodBankModel.Patient">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="PatientBloodGroup" ColumnName="PatientBloodGroup" />
+          <ScalarProperty Name="PatientDisease" ColumnName="PatientDisease" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
